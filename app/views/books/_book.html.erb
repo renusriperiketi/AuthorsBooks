@@ -1,0 +1,27 @@
+
+<p>
+  <strong>Bookname:</strong>
+  <%= book.Bookname %>
+</p>
+
+<p>
+  <strong>Publication year:</strong>
+  <%= book.Publicationyear %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= book.Genre %>
+</p>
+
+<p>
+  <strong>Blurb:</strong>
+  <%= book.Blurb %>
+</p>
+
+<p>
+  <%= link_to "Destroy Book", [book.author, book], data: {
+                turbo_method: :delete,
+                turbo_confirm: "Are you sure?"
+              } %>
+</p>

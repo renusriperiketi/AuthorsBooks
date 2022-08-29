@@ -1,0 +1,24 @@
+<h1><%= @author.Name %></h1>
+
+<p><b>Age: </b><%= @author.Age %></p>
+
+<p><b>City: </b><%= @author.City %></p>
+
+<p><b>Country: </b><%= @author.Country %></p>
+
+<p><b>Qualification: </b><%= @author.Qualification %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_author_path(@author) %></li>
+  <li><%= link_to "Destroy", author_path(@author), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
+
+
+<h2>Books</h2>
+<%= render @author.books %>
+
+<h2>Add a Book:</h2>
+<%= render 'books/form' %>

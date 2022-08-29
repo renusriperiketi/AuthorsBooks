@@ -1,0 +1,31 @@
+<%= form_with model: [ @author, @author.books.build ] do |form| %>
+  <p>
+    <%= form.label :Bookname %><br>
+    <%= form.text_field :Bookname %>
+  </p>
+
+  <p>
+    <%= form.label :Publicationyear %><br>
+    <%= form.text_area :Publicationyear %>
+  </p>
+
+  <p>
+    <%= form.label :Genre %><br>
+    <%= form.text_area :Genre %>
+  </p>
+
+  <p>
+    <%= form.label :Blurb %><br>
+    <%= form.text_area :Blurb %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+  <p>
+    <%= form.label :status %><br>
+    <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+  </p>
+
+<% end %>

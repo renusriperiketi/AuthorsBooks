@@ -1,0 +1,51 @@
+<%= form_with model: @author do |form| %>
+  <div>
+    <%= form.label :Name %><br>
+    <%= form.text_field :Name %>
+    <% @author.errors.full_messages_for(:Name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :Age %><br>
+    <%= form.text_area :Age %><br>
+    <% @author.errors.full_messages_for(:Age).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :City %><br>
+    <%= form.text_area :City %><br>
+    <% @author.errors.full_messages_for(:City).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :Country %><br>
+    <%= form.text_area :Country %><br>
+    <% @author.errors.full_messages_for(:Country).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :Qualification %><br>
+    <%= form.text_area :Qualification %><br>
+    <% @author.errors.full_messages_for(:Qualification).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+    <div>
+        <%= form.label :status %><br>
+        <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+    </div>
+<% end %>
