@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Bookname: MyString
+  Publicationyear: 1
+  Genre: MyString
+  Blurb: MyString
+  author: one
+
+two:
+  Bookname: MyString
+  Publicationyear: 1
+  Genre: MyString
+  Blurb: MyString
+  author: two
